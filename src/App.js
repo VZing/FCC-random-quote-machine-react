@@ -1,8 +1,9 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
+
 const API_KEY =`${process.env.REACT_APP_QUOTE_API_KEY}`
-console.log(API_KEY)
+
 
 function App() {
   return (
@@ -13,8 +14,10 @@ function App() {
           Random Quote Generator
          <div id="quote-box">
            <div id= "quote">
-            <div id= "text">"Art is what you can get away with"</div>
-            <div id= "author">- Andy Warhol</div>
+            {/* <div id= "text">"Art is what you can get away with"</div>
+            <div id= "author">- Andy Warhol</div> */}
+            <div id= "text">{API_KEY.quoteText}</div>
+            <div id= "author">- {API_KEY.quoteAuthor}</div>
           <button id= "new-quote">New Quote</button>
             </div>
           </div>
