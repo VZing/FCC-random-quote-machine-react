@@ -20,3 +20,8 @@
 .App-link {
   color: #09d3ac;
 }
+
+#new-quote {
+  height: 30px;
+  width: 100px;
+}

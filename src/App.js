@@ -8,7 +8,13 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Random Quote Generator
+          <div id="quote-box">
+            <div id= "text"></div>
+            <div id= "author"></div>
+            <button id= "new-quote">New Quote</button>
+           
+          </div>
         </p>
         <a
           className="App-link"
@@ -19,6 +25,7 @@ function App() {
           Learn React
         </a>
       </header>
+     
     </div>
   );
 }
