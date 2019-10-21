@@ -25,3 +25,27 @@
   height: 30px;
   width: 100px;
 }
+
+#quote-box {
+  background-color: aquamarine;
+  color: black;
+  height: 30vh;
+  width: 50vw;
+  align-items: center;
+  position: relative;
+}
+
+#quote {
+  align-items: center;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: calc(20px + 2vmin);
+}
+
+#author {
+  align-items: right;
+  position: relative;
+  font-size: calc(10px + 2vmin);
+}
