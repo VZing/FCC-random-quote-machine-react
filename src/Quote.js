@@ -13,11 +13,13 @@ export default class Quote extends React.Component {
         };
     }
 
+    
     componentDidMount(){
+
         fetch(API_KEY)
         .then(quoteInfo => {
-            // console.log(quoteInfo.json())
-            console.log(JSON.parse(quoteInfo))
+            console.log(quoteInfo.json())
+            // console.log(JSON.parse(quoteInfo))
         
             
         })
@@ -40,6 +42,7 @@ export default class Quote extends React.Component {
 
     render() {
       return (
+  
         <div id="quote-box">
              <div id= "quote">
               <div id= "text">{API_KEY}</div>

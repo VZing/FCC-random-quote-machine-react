@@ -13,6 +13,7 @@ class App extends React.Component{
   render(){
     return (
       <div className="App">
+        {/* <head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script></head> */}
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
   
