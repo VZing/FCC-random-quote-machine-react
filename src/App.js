@@ -19,14 +19,6 @@ class App extends React.Component{
           <img src={logo} className="App-logo" alt="logo" />
   
            <h2> Random Quote Generator</h2>
-           {/* <div id="quote-box">
-             <div id= "quote">
-              <div id= "text">"Art is what you can get away with"</div>
-              <div id= "author">- Andy Warhol</div>
-          
-            <button id= "new-quote">New Quote</button>
-              </div>
-            </div> */}
             <Quote />
           <a
             className="App-link"
