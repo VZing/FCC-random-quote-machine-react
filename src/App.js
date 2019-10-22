@@ -8,10 +8,10 @@ import './App.css';
 
 class App extends React.Component{
 
-  constructor(props){
-    super(props);
-    // this.state = {quote: new Quote()}
-  }
+  // constructor(props){
+  //   super(props);
+  //   // this.state = {quote: new Quote()}
+  // }
   render(){
     return (
       <div className="App">
@@ -19,15 +19,15 @@ class App extends React.Component{
           <img src={logo} className="App-logo" alt="logo" />
   
            <h2> Random Quote Generator</h2>
-           <div id="quote-box">
+           {/* <div id="quote-box">
              <div id= "quote">
               <div id= "text">"Art is what you can get away with"</div>
               <div id= "author">- Andy Warhol</div>
           
             <button id= "new-quote">New Quote</button>
               </div>
-            </div>
-  
+            </div> */}
+            <Quote />
           <a
             className="App-link"
             href="https://reactjs.org"
