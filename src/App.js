@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import Quote from './Quote.js';
 import './App.css';
+import $ from 'jquery';
 
 
 class App extends React.Component{

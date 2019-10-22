@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button.js';
+import $ from 'jquery';
 
 const API_KEY =`${process.env.REACT_APP_QUOTE_API_KEY}`
 // console.log(API_KEY);
@@ -45,8 +46,8 @@ export default class Quote extends React.Component {
   
         <div id="quote-box">
              <div id= "quote">
-              <div id= "text">{API_KEY}</div>
-              <div id= "author">- Andy Warhol</div>
+              <div id= "text">quote</div>
+              <div id= "author">- author</div>
               <Button />
               </div>
             </div>
