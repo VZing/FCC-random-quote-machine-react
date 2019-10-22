@@ -2,13 +2,47 @@ import React from 'react';
 import Button from './Button.js';
 
 const API_KEY =`${process.env.REACT_APP_QUOTE_API_KEY}`
-console.log(API_KEY);
+// console.log(API_KEY);
 export default class Quote extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            error: null,
+            isLoaded: false,
+            items: []
+        };
+    }
+
+    componentDidMount(){
+        fetch(API_KEY)
+        .then(quoteInfo => {
+            // console.log(quoteInfo.json())
+            console.log(JSON.parse(quoteInfo))
+        
+            
+        })
+        .then(
+            (result) => {
+                this.setState({
+                    isLoaded: true,
+                    // items: result.items
+                })
+            },
+            (error)=>{
+                this.setState({
+                    isLoaded: true,
+                    error
+                });
+            }
+        )
+    }
+
+
     render() {
       return (
         <div id="quote-box">
              <div id= "quote">
-              <div id= "text">"Art is what you can get away with"</div>
+              <div id= "text">{API_KEY}</div>
               <div id= "author">- Andy Warhol</div>
               <Button />
               </div>

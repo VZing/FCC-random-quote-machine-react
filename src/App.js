@@ -3,8 +3,6 @@ import logo from './logo.svg';
 import Quote from './Quote.js';
 import './App.css';
 
-// const API_KEY =`${process.env.REACT_APP_QUOTE_API_KEY}`
-// console.log(API_KEY)
 
 class App extends React.Component{
 
