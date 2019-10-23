@@ -2,6 +2,7 @@
 import React from 'react';
 import axios from 'axios';
 import Button from './Button.js';
+import Tweet from './Tweet.js';
 
 const API_KEY = `${process.env.REACT_APP_QUOTE_API_KEY}`
 console.log(API_KEY);
@@ -16,6 +17,7 @@ export default class Quote extends React.Component {
             author: ''
         };
         this.getQuote = this.getQuote.bind(this);
+        this.sendTweet = this.sendTweet.bind(this);
     }
 
 
@@ -31,6 +33,10 @@ export default class Quote extends React.Component {
         this.getQuote();
     }
 
+    sendTweet(){
+
+    }
+
     render() {
   
         return (
@@ -39,6 +45,7 @@ export default class Quote extends React.Component {
                     <div id="text">{this.state.quote}</div>
                     <div id="author">- {this.state.author}</div>
                     <Button getQuote={this.getQuote} />
+                    <Tweet />
                 </div>
             </div>
         );
