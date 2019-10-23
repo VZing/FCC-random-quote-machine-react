@@ -11,7 +11,9 @@ export default class Quote extends React.Component {
         this.state = {
             error: null,
             isLoaded: false,
-            items: []
+            items: [],
+            quote: '',
+            author: ''
         };
         this.getQuote = this.getQuote.bind(this);
     }
@@ -20,7 +22,9 @@ export default class Quote extends React.Component {
     getQuote(){
         axios.get(API_KEY)
             .then(({ data }) => {
-                console.log(data.quoteText);
+               this.setState({ quote: data.quoteText, author: data.quoteAuthor}, () => {
+                   console.log(this.state);
+               })
             });
     }
     componentDidMount() {
@@ -32,9 +36,9 @@ export default class Quote extends React.Component {
         return (
             <div id="quote-box">
                 <div id="quote">
-                    <div id="text">quote</div>
-                    <div id="author">- author</div>
-                    <Button />
+                    <div id="text">{this.state.quote}</div>
+                    <div id="author">- {this.state.author}</div>
+                    <Button getQuote={this.getQuote} />
                 </div>
             </div>
         );

@@ -1,10 +1,13 @@
 import React from 'react';
 // import $ from 'jquery';
 
-export default class Button extends React.Component {
-    render() {
+const Button = (props) => {
+  // console.log(props)
       return (
-            <button id= "new-quote">New Quote</button>
+            <button id= "new-quote" onClick={props.getQuote}>
+              New Quote
+              </button>
       );
-    }
   }
+
+export default Button
