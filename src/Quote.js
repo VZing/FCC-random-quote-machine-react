@@ -1,9 +1,9 @@
 import React from 'react';
 import Button from './Button.js';
-import $ from 'jquery';
+// import $ from 'jquery';
 
 const API_KEY =`${process.env.REACT_APP_QUOTE_API_KEY}`
-// console.log(API_KEY);
+console.log(API_KEY);
 export default class Quote extends React.Component {
     constructor(props){
         super(props);
